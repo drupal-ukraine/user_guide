@@ -11,4 +11,5 @@ before_install:
 
 script:
   - pwd
-  - cd scripts && ./mkoutput.sh
+  - echo 'uk' > scripts/languages.txt
+  - docker run --rm -v $(pwd):/srv andriyun/drupal-user-guide-builder sh -c "cd scripts && ./mkoutput.sh"
