@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull andriyun/drupal-user-guide-builder
+  - pwd
+  - docker ps -a
+  - docker run andriyun/drupal-user-guide-builder
+
+script:
+  - pwd
+  - cd scripts && ./mkoutput.sh
