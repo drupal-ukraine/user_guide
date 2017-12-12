@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cd scripts && ./mkoutput.sh'
+                echo 'uk' > scripts/languages.txt
+                scripts/mkoutput.sh
             }
         }
     }
