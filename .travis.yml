@@ -14,5 +14,7 @@ before_install:
 script:
   - echo 'uk' > scripts/languages.txt
   - docker run --rm -v $(pwd):/srv andriyun/drupal-user-guide-builder sh -c "cd scripts && ./mkoutput.sh"
-  - rsync -avcz --delete -e "$SSH_CMD" ./output/html/uk/ $SSH_DESTINATION/${TRAVIS_PULL_REQUEST}
+  - rsync -avcz --delete -e "$SSH_CMD" ./output/html/uk/ $SSH_DESTINATION/$TRAVIS_PULL_REQUEST
   - rm -rf ./id_rsa
+  - COMMENT="Ready to review http://$REVIEW_DOMAIN/$TRAVIS_PULL_REQUEST/"
+  - curl -H "Authorization: token $GITHUB_TOKEN" -X POST -d "$COMMENT_POST" "https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${TRAVIS_PULL_REQUEST}/comments"
