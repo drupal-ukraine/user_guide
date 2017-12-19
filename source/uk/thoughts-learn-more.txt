@@ -1,5 +1,5 @@
 [[thoughts-learn-more]]
-=== Learning More
+=== Поглиблення знань
 
 [role="summary"]
 Where to find additional material to gain advanced site-building skills.
@@ -17,12 +17,12 @@ Where to find additional material to gain advanced site-building skills.
 (((Training,Training Marketplace)))
 (((Training,Global Training Days)))
 
-==== Prerequisite knowledge
+==== Необхідні знання
 
 * <<understanding-project>>
 * <<thoughts-connecting>>
 
-==== Where can you go to learn more?
+==== Що можна прочитати, щоб дізнатися більше?
 
 The following resources should prove useful to you, as you continue to advance
 your skills:
